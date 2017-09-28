@@ -128,7 +128,8 @@ class GoogleExtension extends CompilerExtension
 			->setClass('Google_Client')
 			->addSetup('$this->addService(?, ?)', array($this->prefix('apiClient'), '@self'))
 			->addSetup('?->configureClient(?)', array($this->prefix('@config'), '@self'))
-			->addSetup('setAccessType', array($config['accessType']));
+			->addSetup('setAccessType', array($config['accessType']))
+			->addSetup('setPrompt', array('select_account'));
 
 //		$curl = $builder->addDefinition($this->prefix('apiIo'))
 //			->setClass('Kdyby\Google\IO\Curl');
