@@ -57,8 +57,8 @@ class GoogleExtension extends CompilerExtension
 			unset($config['clientId'], $config['clientSecret']);
 		}
 
-		Validators::assert($config['appId'], 'string', 'App ID');
-		Validators::assert($config['appSecret'], 'string:24', 'App secret');
+		Validators::assert($config['appId'], 'string', 'Apistation ID');
+		Validators::assert($config['appSecret'], 'string:24', 'Apistation secret');
 		Validators::assert($config['apiKey'], 'string:39|null', 'API Key');
 		Validators::assert($config['scopes'], 'list', 'Permission scopes');
 		if (!in_array($config['accessType'], $allowed = array('online', 'offline'))) {
